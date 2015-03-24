@@ -1,15 +1,15 @@
 var GitterBot = require('./lib/gitter-bot'),
-    GitterHelloParser = require('./lib/gitter-hello-parser'),
-    GitterCalcParser = require('./lib/gitter-calc-parser');
+    HelloParser = require('./lib/parsers/hello-parser'),
+    CalcParser = require('./lib/parsers/calc-parser'),
+    ExchangeParser = require('./lib/parsers/exchange-parser');
 
 var args = process.argv.slice(2),
     roomId = args[0] || 'yuristrelets/uwc7',
     token = args[1] || 'cfec09425d383731b89472e2bad6394607122128';
 
-var uwcBot = new GitterBot(token);
-
-uwcBot
-  .setName('UWC Room Bot')
-  .addParser(new GitterHelloParser())
-  .addParser(new GitterCalcParser())
+new GitterBot(token)
+  .setName('UWC Gitter Bot')
+  .addParser(new HelloParser())
+  .addParser(new CalcParser())
+  .addParser(new ExchangeParser())
   .listenRoom(roomId);
