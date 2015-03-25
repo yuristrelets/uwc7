@@ -25,7 +25,7 @@ node index.js [room] [token]
 
 Использование:
 ```
-new GitterBot('token')
+new GitterBot('token')  // create bot instance
   .setName('Bot Name')  // set bot name
   .addParser(...)       // add parser
   .listenRoom('room');  // start listen room
