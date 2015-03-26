@@ -1,7 +1,7 @@
 # UWC Gitter Bot
 [![Join the chat at https://gitter.im/yuristrelets/uwc7](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yuristrelets/uwc7?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-> Решение для UA Web Challenge VII<br/>
+> Решение для UA Web Challenge VII<br/><br/>
 > email `yuristrelets@gmail.com`<br/>
 > skype `yuristrelets`
 
@@ -47,7 +47,9 @@ new GitterBot('token')  // create bot instance
 
 Использование:
 ```
-bot.addParser(new HelloParser());
+parser = new HelloParser();
+bot.addParser(parser);
+bot.removeParser(parser);
 ```
 
 В проекте реализованы 3 парсера.
