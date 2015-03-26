@@ -48,8 +48,7 @@ new GitterBot('token')  // create bot instance
 Использование:
 ```
 parser = new HelloParser();
-bot.addParser(parser);
-bot.removeParser(parser);
+bot.addParser(parser).removeParser(parser);
 ```
 
 В проекте реализованы 3 парсера.
