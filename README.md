@@ -18,7 +18,7 @@ npm i
 node index.js [room] [token]
 ```
 
-Можно запустить без параметров, будет использоваться комната `yuristrelets/uwc7` и мой токен.
+Можно запустить без параметров, будет использоваться комната `yuristrelets/uwc7` и мой токен (надеюсь на вашу благоразумность ;).
 
 
 ## Зависимости
@@ -61,7 +61,10 @@ new GitterBot('token')  // create bot instance
 Использование:
 ```
 parser = new HelloParser();
-bot.addParser(parser).removeParser(parser);
+mySuperBot
+  .addParser(parser)
+  ...
+  .removeParser(parser);
 ```
 
 В комплекте идут 3 парсера.
@@ -70,8 +73,8 @@ bot.addParser(parser).removeParser(parser);
 
 Основной парсер, описанный в задании.
 Использует комманду `calc {expression}` и возвращает вычисленный результат.
-Используется библиотека mathjs, поэтому выражения, помимо обязательных `(), *, /, +, -`, 
-могут содержать все [доступные](http://mathjs.org/docs/index.html) операции.
+Используется библиотека `mathjs`, поэтому выражения, помимо обязательных `(), *, /, +, -` 
+могут содержать все [доступные](http://mathjs.org/docs/index.html) операции в библиотеке.
 
 **Hello Parser**
 
