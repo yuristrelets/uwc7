@@ -4,7 +4,7 @@ var GitterBot = require('./lib/gitter-bot'),
     ExchangeParser = require('./lib/parsers/exchange-parser');
 
 var args = process.argv.slice(2),
-    roomId = args[0] || 'yuristrelets/uwc7',
+    room = args[0] || 'yuristrelets/uwc7',
     token = args[1] || 'cfec09425d383731b89472e2bad6394607122128';
 
 new GitterBot(token)
@@ -12,4 +12,4 @@ new GitterBot(token)
   .addParser(new HelloParser())
   .addParser(new CalcParser())
   .addParser(new ExchangeParser())
-  .listenRoom(roomId);
+  .listenRoom(room);
