@@ -4,8 +4,12 @@ var GitterBot = require('./lib/gitter-bot'),
     ExchangeParser = require('./lib/parsers/exchange-parser');
 
 var args = process.argv.slice(2),
-    room = args[0] || 'yuristrelets/uwc7',
-    token = args[1] || 'cfec09425d383731b89472e2bad6394607122128';
+    room = args[0],
+    token = args[1];
+
+if(!room || !token) {
+  throw new Error('You forget room or token!');
+}
 
 new GitterBot(token)
   .setName('UWC Gitter Bot')
